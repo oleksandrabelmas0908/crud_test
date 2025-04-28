@@ -7,7 +7,7 @@ product_router = APIRouter(prefix="/product")
 
 
 @product_router.get("/get/{product_id}")
-def get_product(product_id: int):
+async def get_product(product_id: int):
     products = [
         {"id": 1, "name": "Kolbasa"},
         {"id": 2, "name": "Syr"},
@@ -27,17 +27,17 @@ def get_product(product_id: int):
 
 
 @product_router.get("/create")
-def create_product(name: str):
+async def create_product(name: str):
     return
 
 
 @product_router.get("/update")
-def update_product(product_id: int, name: str):
+async def update_product(product_id: int, name: str):
     return
 
 
 @product_router.get("/delete")
-def delete_product(product_id: int):
+async def delete_product(product_id: int):
     return
 
 
