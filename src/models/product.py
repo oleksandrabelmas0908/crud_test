@@ -1,4 +1,5 @@
-from .base import Base, Mapped, mapped_column, String
+from .base import Base, Mapped, mapped_column
+from sqlalchemy import String, Column, Integer
 
 
 class Product(Base):
